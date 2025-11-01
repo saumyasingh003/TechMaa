@@ -1,0 +1,24 @@
+{
+  "courseTitle": "Test course title",
+  "courseDescription": "Test course description",
+  "coursePrice": 33,
+  "isPublished": false,
+  "discount": 10,
+  "courseContent": [
+    {
+      "chapterId": "ch01",
+      "chapterOrder": 1,
+      "chapterTitle": "Chapter 1",
+      "chapterContent": [
+        {
+          "lectureId": "lec01",
+          "lectureTitle": "Lecture 1",
+          "lectureDuration": 10,
+          "lectureUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "isPreviewFree": true,
+          "lectureOrder": 1
+        }
+      ]
+    }
+  ]
+}
