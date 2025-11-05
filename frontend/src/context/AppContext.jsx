@@ -21,7 +21,7 @@ export const AppContextProvider = (props) => {
   const [isEducator, setIsEducator] = useState(false);
   const [enrolledCourses, setEnrolledCourses] = useState([]);
   const [userData, setUserData] = useState(null);
-  // fetch all courses
+  
   const fetchAllCourses = async () => {
     // setAllCourses(dummyCourses);
     try {
@@ -37,7 +37,7 @@ export const AppContextProvider = (props) => {
     }
   };
 
-  // fetch user data
+ 
   const fetchUserData = async () => {
     if (user.publicMetadata.role === "educator") {
       setIsEducator(true);
@@ -53,9 +53,7 @@ export const AppContextProvider = (props) => {
 
       if (data.success) {
         setUserData(data.user);
-      } else {
-        toast.error(data.message);
-      }
+      } 
     } catch (error) {
       toast.error(error.message);
     }
@@ -127,10 +125,12 @@ export const AppContextProvider = (props) => {
       if (data.success) {
         setEnrolledCourses(data?.enrolledCourses?.reverse());
       } else {
-        toast.error(data.message);
+        // toast.error(data.message);
+        console.log(data.message);
       }
     } catch (error) {
-      toast.error(error.message);
+      // toast.error(error.message);
+      console.log(error.message);
     }
   };
   useEffect(() => {
