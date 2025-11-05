@@ -3,13 +3,13 @@ dotenv.config();
 import express from "express";
 import cors from "cors";
 
-import connectDB from "./config/mongodb.js";
-import connectCloudinary from "./config/cloudinary.js";
-import { clerkWebhook } from "./controllers/webhooks.js";
-import educatorRouter from "./routes/educatorRoutes.js";
+import connectDB from "../config/mongodb.js";
+import connectCloudinary from "../config/cloudinary.js";
+import { clerkWebhook } from "../controllers/webhooks.js";
+import educatorRouter from "../routes/educatorRoutes.js";
 import { clerkMiddleware } from "@clerk/express";
-import courseRouter from "./routes/courseRoute.js";
-import userRouter from "./routes/userRouter.js";
+import courseRouter from "../routes/courseRoute.js";
+import userRouter from "../routes/userRouter.js";
 // Webhook controller
 
 // --- Configuration & Initialization ---
