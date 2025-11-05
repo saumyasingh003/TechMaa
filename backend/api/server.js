@@ -45,3 +45,5 @@ app.get("/api/ping", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on ${PORT}`);
 });
+
+module.exports = app;
